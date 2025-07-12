@@ -74,8 +74,11 @@ h3 {
 }
 
 .titulos-sop{
+    display: inline-block;
+    justify-content: flex-start;
     text-decoration: underline;
     text-align: left;
+    align-items: flex-start;
 }
 
 /* PARRAFOS */
@@ -113,6 +116,14 @@ p {
     font-style: italic;
 }
 
+.p-sop {
+    display: inline-block;
+    text-align: right;
+    margin-right: 200px;
+    padding-left: 50%;
+}
+
+
 /* CUERPO Y MAINS */
 
 body {
@@ -142,4 +153,67 @@ div h5 {
     font-size: 20px;
     margin: 10px;
     text-align: center;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 600px) {
+    nav, .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+    .logo {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+    section {
+        margin: 20px 5px;
+        padding: 20px 10px;
+        border-width: 2px;
+    }
+    h1 {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    h3 {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+
+    main{
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .titulos-sop {
+        text-align: center;
+        padding: 0;
+        font-size: 15px;
+    }
+    p, .par-der, .par-cen, .p-sop {
+        text-align: center;
+        font-size: 13px;
+        padding: 0 0;
+        margin: 0;
+    }
+
+    ul{
+        padding: 0px 0px 0px 0px;
+        margin: 0;
+        list-style-type: none;
+        
+    }
+    footer {
+        padding: 10px 5px;
+        text-align: center;
+    }
+    div h5 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
 }
