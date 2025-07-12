@@ -135,3 +135,12 @@ footer{
 .dblock {
     width: 100%;
 }
+
+.dblock img {
+    width: 100%;
+    height: auto;
+}
+
+.comentario{
+    color: solid black;
+}
