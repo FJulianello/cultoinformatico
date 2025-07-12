@@ -131,3 +131,7 @@ footer{
     background-color: beige;
     align-items: baseline;
 }
+
+.dblock {
+    width: 100%;
+}
