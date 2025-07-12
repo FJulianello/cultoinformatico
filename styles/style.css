@@ -4,47 +4,48 @@
     box-sizing: border-box;
 }
 
-a{
-    box-shadow: 20px;
-    font-family: "Montserrat", sans-serif;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    letter-spacing: 1px;
-}
 nav {
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     background-color: rgb(235, 235, 235);
 }
 
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-decoration: none;
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
     gap: 32px;
 }
-.navbar ul li{
+
+.navbar ul li {
     text-decoration: none;
     list-style-type: none;
 }
 
-.logo{
-    width: 80px; /* Solo darle widht para que no rompa la imagen*/
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 20px;
+    width: 250px;
+    /* Solo darle widht para que no rompa la imagen*/
 }
 
-.logo-redes{
+.logo-redes {
     width: 30px;
-    
+
 }
 
-section{
+section {
     align-items: center;
     margin: 50px;
     padding: 50px;
@@ -52,7 +53,7 @@ section{
     justify-content: center;
 }
 
-section h3{
+section h3 {
     display: inline-block;
     gap: 20px;
 }
@@ -73,7 +74,7 @@ h3 {
     justify-content: center;
 }
 
-.titulos-sop{
+.titulos-sop {
     display: inline-block;
     justify-content: flex-start;
     text-decoration: underline;
@@ -83,7 +84,7 @@ h3 {
 
 /* PARRAFOS */
 
-ul p{
+ul p {
     text-align: right;
 }
 
@@ -95,7 +96,7 @@ ul p{
     text-align: right;
 }
 
-.par-cen{
+.par-cen {
     color: rgb(87, 82, 82);
     font-size: 14px;
     font-family: "Source Sans 3", sans-serif;
@@ -110,7 +111,7 @@ p {
     margin: auto;
 }
 
-.experiencia{
+.experiencia {
     color: rgb(87, 82, 82);
     font-family: "Source Sans 3", sans-serif;
     font-style: italic;
@@ -136,17 +137,15 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-footer{
-    background-color: beige;
-    align-items: baseline;
-}
 
-
-p{
+p {
     color: black;
-}  
+}
 
 div h5 {
     color: black;
@@ -155,63 +154,131 @@ div h5 {
     text-align: center;
 }
 
-/* MOBILE STYLES */
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(235, 235, 235);
+}
+
+/* MOBIL */
 @media (max-width: 600px) {
-    nav, .navbar {
+
+    nav,
+    .navbar {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     .navbar ul {
         flex-direction: column;
         gap: 16px;
         padding: 0;
     }
+
     .logo {
         width: 60px;
         margin-bottom: 10px;
     }
+
     section {
         margin: 20px 5px;
         padding: 20px 10px;
         border-width: 2px;
     }
+
     h1 {
         font-size: 22px;
         margin: 10px 0;
     }
+
+    h2 {
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+
     h3 {
         font-size: 16px;
         padding: 0 5px;
     }
 
-    main{
+    body a {
+        box-shadow: 20px;
+        font-family: "Montserrat", sans-serif;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    li a {
+        font-family: "Montserrat", sans-serif;
+        color: solid black
+    }
+
+    .logo {
+        width: 150px;
+        /* Ajustar el ancho de la imagen del logo */
+    }
+
+    main {
         padding: 20px;
         width: 100%;
         box-sizing: border-box;
     }
+
     .titulos-sop {
+        display: block;
+        padding: 10px 0;
+        text-decoration: underline;
+        font-size: 18px;
         text-align: center;
         padding: 0;
         font-size: 15px;
     }
-    p, .par-der, .par-cen, .p-sop {
+
+    p,
+    .par-der,
+    .par-cen,
+    .p-sop {
         text-align: center;
         font-size: 13px;
         padding: 0 0;
         margin: 0;
     }
 
-    ul{
-        padding: 0px 0px 0px 0px;
-        margin: 0;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: solid black;
         list-style-type: none;
-        
+
     }
+
     footer {
-        padding: 10px 5px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    footer p {
+        display: block;
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
     div h5 {
         font-size: 16px;
         margin: 5px 0;
