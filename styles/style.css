@@ -132,15 +132,14 @@ footer{
     align-items: baseline;
 }
 
-.dblock {
-    width: 100%;
-}
 
-.dblock img {
-    width: 100%;
-    height: auto;
-}
+p{
+    color: black;
+}  
 
-.comentario{
-    color: solid black;
+div h5 {
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
 }
