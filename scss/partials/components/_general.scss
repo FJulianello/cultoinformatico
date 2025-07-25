@@ -67,5 +67,100 @@ div h5 {
   text-align: center;
 }
 
-/* Incluí media queries directamente en el main.scss,
-   pero podrías moverlos a un partial si querés separarlos */
+@include responsive(600px) {
+  nav,
+  .navbar {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  section {
+    @extend %responsive-section;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    @extend %flex-center;
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding: 0 5px;
+  }
+
+  body a {
+    box-shadow: 20px;
+    font-family: $secondary-font;
+    color: $black;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  li a {
+    font-family: $secondary-font;
+    color: $black;
+  }
+
+  main {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .titulos-sop {
+    display: block;
+    text-decoration: underline;
+    font-size: 15px;
+    text-align: center;
+    padding: 0;
+  }
+
+  p,
+  .par-der,
+  .par-cen,
+  .p-sop {
+    @extend %text-paragraph;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    @extend %flex-center;
+    flex-direction: column;
+    color: $black;
+    list-style-type: none;
+  }
+
+  footer {
+    @extend %responsive-footer;
+  }
+
+  footer p {
+    display: block;
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  div h5 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+

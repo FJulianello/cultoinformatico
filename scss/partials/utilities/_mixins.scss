@@ -1,1 +1,5 @@
-// (vacío por ahora, pero útil si agregás mixins como media queries personalizados)
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
