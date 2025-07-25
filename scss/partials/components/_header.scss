@@ -1,0 +1,38 @@
+nav {
+  font-family: $primary-font;
+  text-decoration: none;
+  background-color: $light-bg;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  gap: 32px;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+  width: 250px;
+}
+
+.logo-redes {
+  width: 30px;
+}

@@ -1,0 +1,21 @@
+h1 {
+  color: $black;
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-family: $secondary-font;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.titulos-sop {
+  display: inline-block;
+  justify-content: flex-start;
+  text-decoration: underline;
+  text-align: left;
+  align-items: flex-start;
+}
