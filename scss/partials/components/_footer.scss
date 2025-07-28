@@ -1,8 +1,16 @@
+@use "../utilities/variables";
+
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: $light-bg;
+  background-color: variables.$light-bg;
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

@@ -1,10 +1,10 @@
-@use "utilities/variables";
-@use "utilities/mixins";
-@use "utilities/extend";
+/*@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+@use "./partials/utilities/extend";
+*/
+@use "./partials/base/reset";
+@use "./partials/base/tipografia";
 
-@use "base/reset";
-@use "base/tipografia";
-
-@use "components/header";
-@use "components/footer";
-@use "components/general";
+@use "./partials/components/header";
+@use "./partials/components/general";
+@use "./partials/components/footer";

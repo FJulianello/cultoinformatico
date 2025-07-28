@@ -1,288 +1,239 @@
-/*RESET*/
-
+/*@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+@use "./partials/utilities/extend";
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-nav {
-    font-family: "Raleway", sans-serif;
-    text-decoration: none;
-    background-color: rgb(235, 235, 235);
-}
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-.navbar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-decoration: none;
-    gap: 32px;
-}
-
-.navbar ul li {
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    margin: 20px;
-    width: 250px;
-    /* Solo darle widht para que no rompa la imagen*/
-}
-
-.logo-redes {
-    width: 30px;
-
-}
-
-section {
-    align-items: center;
-    margin: 50px;
-    padding: 50px;
-    border: 3px solid black;
-    justify-content: center;
-}
-
-section h3 {
-    display: inline-block;
-    gap: 20px;
-}
-
-/* HEADERS */
 
 h1 {
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    margin: 20px;
-    text-align: center;
+  color: #000000;
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
 }
 
 h3 {
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .titulos-sop {
-    display: inline-block;
-    justify-content: flex-start;
-    text-decoration: underline;
-    text-align: left;
-    align-items: flex-start;
+  display: inline-block;
+  justify-content: flex-start;
+  text-decoration: underline;
+  text-align: left;
+  align-items: flex-start;
 }
 
-/* PARRAFOS */
-
-ul p {
-    text-align: right;
+nav {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  background-color: rgb(235, 235, 235);
 }
 
-.par-der {
-    color: rgb(87, 82, 82);
-    font-size: 14px;
-    font-family: "Source Sans 3", sans-serif;
-    margin: auto;
-    text-align: right;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.par-cen {
-    color: rgb(87, 82, 82);
-    font-size: 14px;
-    font-family: "Source Sans 3", sans-serif;
-    margin: auto;
-    text-align: center;
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  gap: 32px;
 }
 
-p {
-    color: rgb(87, 82, 82);
-    font-size: 14px;
-    font-family: "Source Sans 3", sans-serif;
-    margin: auto;
+.navbar ul li {
+  text-decoration: none;
+  list-style-type: none;
 }
 
-.experiencia {
-    color: rgb(87, 82, 82);
-    font-family: "Source Sans 3", sans-serif;
-    font-style: italic;
+.navbar-nav .nav-link {
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 
-.p-sop {
-    display: inline-block;
-    text-align: right;
-    margin-right: 200px;
-    padding-left: 50%;
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+  width: 250px;
 }
 
-
-/* CUERPO Y MAINS */
+.logo-redes {
+  width: 30px;
+}
 
 body {
-    background-color: rgb(255, 255, 255);
-    font-family: "Raleway", sans-serif;
+  background-color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 28px;
+  color: #000000;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+main p {
+  color: rgb(87, 82, 82);
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.p-sop {
+  display: inline-block;
+  justify-content: right;
+  text-align: right;
+  margin-right: 0px;
+  padding-left: 25%;
+}
+
+.par-der {
+  text-align: right;
+}
+
+.par-cen {
+  text-align: center;
+}
+
+.titulos-sop {
+  display: inline-block;
+  justify-content: left;
+  text-align: left;
+  margin-right: 0px;
+  padding-left: 25%;
+}
+
+/* LOGO */
+main img.logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* SECCIONES CON ICONOS */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.container .row {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.container img {
+  max-width: 120px;
+  height: auto;
+}
+
+.container h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.container p {
+  font-size: 15px;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  main {
+    padding: 20px 10px;
+  }
+  main h1 {
+    font-size: 22px;
+  }
+  main p {
+    font-size: 14px;
+  }
+  .container .row {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-p {
-    color: black;
-}
-
-div h5 {
-    color: black;
-    font-size: 20px;
-    margin: 10px;
     text-align: center;
+  }
+  .container img {
+    margin-bottom: 10px;
+  }
+  .container h2 {
+    font-size: 20px;
+  }
+  footer {
+    padding: 15px;
+  }
+  footer p {
+    font-size: 12px;
+  }
 }
-
-/* FOOTER */
-
-footer {
+@media (max-width: 480px) {
+  main img.logo {
+    width: 180px;
+  }
+  .container h2 {
+    font-size: 18px;
+  }
+  .container p {
+    font-size: 13px;
+  }
+  footer p {
+    font-size: 11px;
+  }
+  footer a {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: rgb(235, 235, 235);
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+}
+footer a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* MOBIL */
-@media (max-width: 600px) {
-
-    nav,
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 16px;
-        padding: 0;
-    }
-
-    .logo {
-        width: 60px;
-        margin-bottom: 10px;
-    }
-
-    section {
-        margin: 20px 5px;
-        padding: 20px 10px;
-        border-width: 2px;
-    }
-
-    h1 {
-        font-size: 22px;
-        margin: 10px 0;
-    }
-
-    h2 {
-        display: flex;
-        font-size: 18px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h3 {
-        font-size: 16px;
-        padding: 0 5px;
-    }
-
-    body a {
-        box-shadow: 20px;
-        font-family: "Montserrat", sans-serif;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        letter-spacing: 1px;
-    }
-
-    li a {
-        font-family: "Montserrat", sans-serif;
-        color: solid black
-    }
-
-    .logo {
-        width: 150px;
-        /* Ajustar el ancho de la imagen del logo */
-    }
-
-    main {
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .titulos-sop {
-        display: block;
-        padding: 10px 0;
-        text-decoration: underline;
-        font-size: 18px;
-        text-align: center;
-        padding: 0;
-        font-size: 15px;
-    }
-
-    p,
-    .par-der,
-    .par-cen,
-    .p-sop {
-        text-align: center;
-        font-size: 13px;
-        padding: 0 0;
-        margin: 0;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: solid black;
-        list-style-type: none;
-
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    footer p {
-        display: block;
-        font-size: 12px;
-        margin: 5px 0;
-    }
-
-    div h5 {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-}
+/*# sourceMappingURL=style.css.map */
