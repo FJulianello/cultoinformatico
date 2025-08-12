@@ -8,3 +8,11 @@
 @use "./partials/components/header";
 @use "./partials/components/general";
 @use "./partials/components/footer";
+
+@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+@use "./partials/utilities/extend";
+
+@use "./partials/utilities/form";
+@use "./partials/utilities/base";
+@use "./partials/utilities/layout";
